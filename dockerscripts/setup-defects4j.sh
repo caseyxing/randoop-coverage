@@ -2,6 +2,7 @@
 # Steps 1-4 from https://github.com/rjust/defects4j/blob/master/README.md#steps-to-set-up-defects4j
 
 set -e
+export JAVA_HOME=`dirname $(dirname $(readlink -f $(which javac)))`
 cd $HOME
 
 git clone https://github.com/rjust/defects4j

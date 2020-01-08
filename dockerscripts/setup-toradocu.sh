@@ -1,10 +1,12 @@
 #!/bin/bash
 
 set -e
+export JAVA_HOME=`dirname $(dirname $(readlink -f $(which javac)))`
 cd $HOME
 
-git clone git@gitlab.cs.washington.edu:randoop/toradocu-coverage.git
+git clone https://github.com/randoop/toradocu-coverage.git
 cd toradocu-coverage
+git checkout dockerfile
 mkdir -p evaluation/coverage
 mkdir -p evaluation/logs
 mkdir -p toradocu/logs
